@@ -1,0 +1,8 @@
+summary = plot_df.groupby("classification").agg(
+    avg_pnl=("closed_pnl", "mean"),
+    median_pnl=("closed_pnl", "median"),
+    win_rate=("closed_pnl", lambda x: (x > 0).mean() * 100),
+    trade_count=("closed_pnl", "count")
+).reset_index()
+
+summary

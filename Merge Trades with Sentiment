@@ -1,0 +1,8 @@
+merged_df = trades_df.merge(
+    sentiment_df[["sentiment_date", "classification"]],
+    left_on="trade_date_utc",
+    right_on="sentiment_date",
+    how="left"
+)
+
+merged_df.head()

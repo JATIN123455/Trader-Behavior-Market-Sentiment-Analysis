@@ -1,0 +1,6 @@
+# Normalize column names
+trades_df.columns = trades_df.columns.str.strip().str.lower().str.replace(" ", "_")
+sentiment_df.columns = sentiment_df.columns.str.strip().str.lower().str.replace(" ", "_")
+
+print(trades_df.columns)
+print(sentiment_df.columns)

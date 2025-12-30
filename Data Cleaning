@@ -1,0 +1,10 @@
+# Rename PnL column for consistency
+if "closed_pnl" not in trades_df.columns:
+    for c in trades_df.columns:
+        if "pnl" in c:
+            trades_df.rename(columns={c: "closed_pnl"}, inplace=True)
+
+# Drop trades without realized PnL
+trades_df = trades_df.dropna(subset=["closed_pnl"])
+
+print(trades_df.shape)

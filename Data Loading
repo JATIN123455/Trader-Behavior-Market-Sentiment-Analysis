@@ -1,0 +1,6 @@
+# Load datasets
+trades_df = pd.read_csv("data/raw/historical_data.csv")
+sentiment_df = pd.read_csv("data/raw/fear_greed_index.csv")
+
+print(trades_df.shape)
+print(sentiment_df.shape)

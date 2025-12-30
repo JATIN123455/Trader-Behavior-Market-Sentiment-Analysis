@@ -1,0 +1,2 @@
+plot_df = merged_df.dropna(subset=["classification", "closed_pnl"])
+print(plot_df.shape)

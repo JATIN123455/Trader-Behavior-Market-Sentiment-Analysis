@@ -1,0 +1,13 @@
+plt.figure(figsize=(8,5))
+sns.barplot(
+    data=summary,
+    x="classification",
+    y="trade_count"
+)
+plt.title("Trade Count by Market Sentiment")
+plt.xticks(rotation=30)
+plt.xlabel("Market Sentiment")
+plt.ylabel("Number of Trades")
+plt.tight_layout()
+plt.savefig("outputs/figures/trade_count_by_sentiment.png")
+plt.show()
